@@ -33,6 +33,9 @@ object HelloScala {
     var target: Option[Double] = parseDouble(source)
     println("Double target: ", target)
 
+    val x = convert(source)
+    println(x)
+
   }
 
   def add(a: Int, b: Int): Int = {
@@ -46,12 +49,19 @@ object HelloScala {
     s.toDouble
   }.toOption
 
-  private def stringToDouble(str: String): Double = {
+  def stringToDouble(str: String): Double = {
     try {
       str.toDouble
     } catch {
       case _ => Double.NaN
     }
   }
+
+  def convert(from: String): Option[Seq[String]] = {
+    var terms: Seq[String] = from.split("\\|")
+    terms = null
+    Option(terms)
+  }
+
 
 }
