@@ -12,6 +12,7 @@
         <spark.version>2.1.1</spark.version>
         <scala.version>2.11</scala.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.spark</groupId>
